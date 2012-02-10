@@ -1,0 +1,70 @@
+<project>
+
+	<name>OGMO Project Template</name>
+	
+	
+	<settings>
+	
+		<defaultWidth>400</defaultWidth>
+		<defaultHeight>300</defaultHeight>
+		
+		<minWidth>400</minWidth>
+		<minHeight>300</minHeight>
+		
+		<maxWidth>400</maxWidth>
+		<maxHeight>300</maxHeight>
+		
+		<workingDirectory>working_directory</workingDirectory>
+		
+	</settings>
+	
+	<values>
+		<string name="title" default="Level Title..." maxChars="20" />
+	</values>
+	
+	<objects>
+		<object name="player" 		image="player.png" 			width="16" 	height="32" limit="1"	/>
+		<object name="player_robot" image="player_robot.png" 	width="16" 	height="32" limit="1"	/>
+		<object name="grass" 		image="grass.png" 			width="16" 	height="16"				/>
+		<object name="coin" 		image="coin.png" 			width="16" 	height="16"				/>
+		<folder name="spikes">
+			<object name="SpikesCeiling" 	image="spikes_ceiling.png" 			width="16" 	height="16"		/>
+			<object name="SpikesLeft" 		image="spikes_left.png" 			width="16" 	height="16"		/>
+			<object name="SpikesRight" 		image="spikes_right.png" 			width="16" 	height="16"		/>
+			<object name="SpikesFloor" 		image="spikes_floor.png" 			width="16" 	height="16"		/>
+		</folder>
+		<folder name="walls">
+			<object name="wall1" 		image="wall1.png" 			width="16" 	height="16"				/>
+			<object name="wall2" 		image="wall2.png" 			width="16" 	height="16"				/>
+			<object name="wall3" 		image="wall3.png" 			width="16" 	height="16"				/>
+		</folder>
+		<folder name="platform">
+			<object name="platform_left" 			image="platform_left.png" 			width="16" 	height="16"				/>
+			<object name="platform" 				image="platform.png" 				width="16" 	height="16"				/>
+			<object name="platform_right" 			image="platform_right.png" 			width="16" 	height="16"				/>
+			<object name="platform_lower_left" 		image="platform_lower_left.png" 	width="16" 	height="16"				/>
+			<object name="platform_lower" 			image="platform_lower.png" 			width="16" 	height="16"				/>
+			<object name="platform_lower_right" 	image="platform_lower_right.png" 	width="16" 	height="16"				/>
+		</folder>
+		<object name="finish" 		image="finish.png" 			width="16" 	height="16"	 limit="1"	/>
+		<object name="background1" 	image="background1.png" 	width="400" height="300" limit="1"	/>
+	</objects>
+	
+	
+
+	<!-- Layers are groups of objects which are drawn to the screen in this order (background is lowest) -->
+	<layers>
+		<!-- foreground - No Collision -->
+		<objects name="foreground" 	gridSize="16" 	drawGridSize="16" 	/>
+		
+		<!-- dynamic - Things that may appear and disappear or move -->
+		<objects name="dynamic" 	gridSize="16" 	drawGridSize="16" 	/>
+		
+		<!-- static - Permanent Things -->
+		<objects name="static" 		gridSize="16" 	drawGridSize="16" 	/>
+		
+		<!-- background - No Collision -->
+		<objects name="background" 	gridSize="400" 	drawGridSize="400" 	/>
+	</layers>
+
+</project>

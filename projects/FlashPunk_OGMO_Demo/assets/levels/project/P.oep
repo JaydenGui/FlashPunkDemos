@@ -1,0 +1,97 @@
+<project>
+
+
+	<!--
+		////////////////////////////////////////////////////////////////////////////////////////////////
+		////////////////////////////////////////////////////////////////////////////////////////////////
+		//OVERALL -	This is the name of this OGMO project. You probably will create one project per game. 
+		//			A project defines the types of stuff and the structure of stuff that is ONE level for your game.
+		//			When you open a project in OGMO, you draw, export, and save LEVELS. The LEVELS are loaded into your game.
+		//
+		//			MORE INFO: http://ogmoeditor.com/help/getting_started/index.html
+		//
+		////////////////////////////////////////////////////////////////////////////////////////////////
+		////////////////////////////////////////////////////////////////////////////////////////////////
+	-->
+	<name>OGMO Project Template</name>
+	
+	
+	<!--
+		////////////
+		//SETTINGS - Some Are Required, some are optional.
+		////////////
+	-->
+	<settings>
+	
+		<defaultWidth>400</defaultWidth>
+		<defaultHeight>300</defaultHeight>
+		
+		<minWidth>400</minWidth>
+		<minHeight>300</minHeight>
+		
+		<maxWidth>400</maxWidth>
+		<maxHeight>300</maxHeight>
+		
+		<workingDirectory>workingDirectory</workingDirectory>
+		
+	</settings>
+	
+	<!--
+		////////////
+		//PROPERTIES - For the level. Declare whatever your game needs (ex. title)
+		////////////
+	-->
+	<values>
+		<string name="title" default="Level Title..." maxChars="20" />
+	</values>
+	
+	
+	
+	
+	
+	<!--
+		////////////
+		//LIBRARY 
+		////////////
+	-->
+	
+    <!-- LIBRARY (Only shown for <object> layers) -->
+	<objects>
+			<object name= "brick1" image = "wall1.png" width = "16" height = "16" />
+	</objects>
+	
+    <!-- LIBRARY (Only shown for <grid> layers) -->
+	<tilesets> 
+		<tileset name="Grasses" image="grass_tileset.png" 	tileWidth="25" tileHeight="25" palleteScale="2" />
+		<tileset name="bricks" 	image="wall1.png" 			tileWidth="4" 	tileHeight="4" />
+	</tilesets>
+
+    <!-- LIBRARY (Only shown for floor layers) -->
+    <!-- Actually, the floor needs no library, because you just paint black or white -->
+
+
+
+
+
+	<!--
+		////////////
+		//DRAW 
+		////////////
+	-->
+
+    <!-- Each layer appears in the editor (and if parsed it appears in your game) -->
+	<layers>
+	
+    	<!-- Objects - Things that will be mapped to individual classes in your game (ex. player, coins, ect... -->
+		<objects name ="All_Objects" gridSize="16" />
+		
+    	<!-- Tiles - Things that will be drawn but not interactive (background) -->
+		<tiles name="Background_Tiles" gridSize="16" multipleTilesets="true" />
+		
+    	<!-- Grid - Things that will determine detection  -->
+		<grid name="Floor_Grid" gridSize="16" exportAsObjects="true"/>
+	
+	</layers>
+
+ 
+</project>
