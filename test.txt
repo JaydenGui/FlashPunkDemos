@@ -1,0 +1,16 @@
+# Rewrite to www.
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^blog.rivellomultimediaconsulting\.com$ [NC]
+RewriteRule ^(.*)$ http://www.blog.RivelloMultimediaConsulting.com/$1 [L,R=301]
+RewriteRule ^posts/(.+)$ http://www.RivelloMultimediaConsulting.com/$1 [R=301,L]
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
